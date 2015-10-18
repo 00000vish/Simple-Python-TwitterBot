@@ -16,9 +16,11 @@ Fill in Oauth info to
 #Favorite
 To favorite a tweet you would add
 
+```python
 fav(raw_data.split('"id":')[1].split('"id_str":')[0].replace(",", ""))
+```
 
-in on_data method. 
+in ```on_data``` method. 
 
 #Streaming API
 This will listen to "#infoleak"
