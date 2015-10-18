@@ -1,5 +1,5 @@
 # Simple-Python-TwitterBot ```in progress```
-Simple python code i created for my twitter bot, that will listen to ketword and retweet or favorite it.
+Simple python code i created for my twitter bot. It is able to listen to ketword and retweet and/or favorite it.
 
 
 Need to have twitter app with Oauth keys and etc.
