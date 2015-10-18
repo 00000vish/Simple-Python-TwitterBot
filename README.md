@@ -9,6 +9,9 @@ if you dont have one create it here : https://apps.twitter.com/
 Fill in Oauth info to
 
 ckey = ''
+
 csecret = ''
+
 atoken = ''
+
 asecret = ''
