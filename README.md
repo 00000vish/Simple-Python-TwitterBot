@@ -25,11 +25,17 @@ in ```on_data``` method.
 #Streaming API
 This will listen to "#SriLanka" tag live.
  
-Lets say if you want to change it to ```"Hello World"```, you would replace ```SriLanka``` with ```"Hello World"```
+Lets say if you want to change it to ```"#Hello World"```, you would replace ```"#SriLanka"``` with ```"#Hello World"```
 
 like below.
 ```python
 twt.filter(track=["#Hello World"])
+```
+
+If you want to listen to both you would put both in track like this.
+
+```python
+twt.filter(track=["#Hello World", "#SriLanka"])
 ```
 
 
