@@ -1,6 +1,6 @@
 #!/usr/local/bin/python3.3
-import tweepy
 
+import tweepy
 from tweepy.auth import OAuthHandler
 from tweepy.streaming import StreamListener, Stream
 
@@ -13,39 +13,52 @@ auths = OAuthHandler(ckey, csecret)
 auths.set_access_token(atoken, asecret)
 api = tweepy.API(auths)
 
-
 class listener(StreamListener):
     def on_data(self, raw_data):
-        print(raw_data.split('"id":')[1].split('"id_str":')[0].replace(",", ""))
-        # .split('"id":')[1].split('"id_str":')[0].replace(",", "")
-        retweet(raw_data.split('"id":')[1].split('"id_str":')[0].replace(",", ""))
-        return True
+        try:
+            retweet(raw_data.split('"id":')[1].split('"id_str":')[0].replace(",", ""))
+            return True
+        except Exception:
+            pass
+			
 
     def on_error(self, status_code):
-        print( "error" + status_code)
-
-
-# twt = Stream(auths, listener())
-#   twt.filter(track=["sl"])
-
+        try:
+            print( "error" + status_code)
+        except Exception:
+            pass
+			
 
 def retweet(myid):
-    api.retweet(myid)
-    print( "retweeted")
+    try:
+        api.retweet(myid)
+    except Exception:
+        pass
 
 
 def fav(myid):
-    api.create_favorite(myid)
+    try:
+        api.create_favorite(myid)
+    except Exception:
+        pass
 
 
 def unfav(myid):
-    api.destroy_favorite(myid)
+    try:
+        api.destroy_favorite(myid)
+    except Exception:
+        pass
 
 
 def tweet(myinput):
-    api.update_status(myinput)
+    try:
+        api.update_status(myinput)
+    except Exception:
+        pass
 
 
-twt = Stream(auths, listener())
-twt.filter(track=["#infoleak"])
-# fav(input())
+try:
+    twt = Stream(auths, listener())
+    twt.filter(track=["#lka","SriLanka","@Jothipala_Bot","@SiripalaBot"])
+except Exception:
+    pass
