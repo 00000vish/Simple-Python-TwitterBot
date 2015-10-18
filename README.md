@@ -16,14 +16,14 @@ atoken = ''
 
 asecret = ''
 
-#favorite
+#Favorite
 To favorite a tweet you would add
 
 fav(raw_data.split('"id":')[1].split('"id_str":')[0].replace(",", ""))
 
 in on_data method. 
 
-#Stream
+#Streaming API
 This will listen to "#infoleak"
 
 you can change it here -->twt.filter(track=["#infoleak"])
