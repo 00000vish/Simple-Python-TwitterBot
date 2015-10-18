@@ -25,6 +25,9 @@ in ```on_data``` method.
 #Streaming API
 This will listen to "#infoleak"
 
-you can change it here -->twt.filter(track=["#infoleak"])
+you can change it here
+```python
+twt.filter(track=["#infoleak"])
+```
 
 
