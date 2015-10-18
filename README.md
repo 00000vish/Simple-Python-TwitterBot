@@ -22,6 +22,16 @@ fav(raw_data.split('"id":')[1].split('"id_str":')[0].replace(",", ""))
 
 in ```on_data``` method. 
 
+
+#UnFavorite
+To favorite a tweet you would add
+
+```python
+unfav(raw_data.split('"id":')[1].split('"id_str":')[0].replace(",", ""))
+```
+
+in ```on_data``` method. 
+
 #Streaming API
 This will listen to "#SriLanka" tag live.
  
