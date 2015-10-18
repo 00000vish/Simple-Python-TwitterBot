@@ -23,11 +23,13 @@ fav(raw_data.split('"id":')[1].split('"id_str":')[0].replace(",", ""))
 in ```on_data``` method. 
 
 #Streaming API
-This will listen to "#infoleak"
+This will listen to "#SriLanka" tag live.
+ 
+Lets say if you want to change it to ```"Hello World"```, you would replace ```SriLanka``` with ```"Hello World"```
 
-you can change it here
+like below.
 ```python
-twt.filter(track=["#infoleak"])
+twt.filter(track=["#Hello World"])
 ```
 
 
