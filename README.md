@@ -3,9 +3,9 @@
 Simple python code i created for my twitter bot. It is able to listen to ketword and retweet and/or favorite it.
 
 Exmaples:  
-           https://twitter.com/Jothipala_Bot
+@Jothipala_Bot  :  https://twitter.com/Jothipala_Bot
+@WinnipegWatch  :  https://twitter.com/WinnipegWatch
            
-           https://twitter.com/WinnipegWatch
 
 Need to have twitter app with Oauth keys and etc.
 
