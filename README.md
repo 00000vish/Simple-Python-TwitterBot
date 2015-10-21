@@ -4,7 +4,6 @@ Simple python code i created for my twitter bot. It is able to listen to ketword
 
 Exmaples:  
            https://twitter.com/Jothipala_Bot
-
            https://twitter.com/WinnipegWatch
 
 Need to have twitter app with Oauth keys and etc.
