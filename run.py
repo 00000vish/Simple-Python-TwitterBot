@@ -75,10 +75,10 @@ def tweet(myinput):
 
 
 try:
-    twt = Stream(auths, listener())
-
     track_words = ["#lka","SriLanka","@Jothipala_Bot","@SiripalaBot"]
     follow_acc = ['2312312' , '1234332'] # all username converted to user ids
+    
+    twt = Stream(auths, listener())
     twt.filter(track= track_words , follow = follow_acc)
 except Exception as e:
     print(str(e))
