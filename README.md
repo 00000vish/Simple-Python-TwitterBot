@@ -23,7 +23,7 @@ Fill in Oauth info to
 To favorite a tweet you would add
 
 ```python
-fav(raw_data.split('"id":')[1].split('"id_str":')[0].replace(",", ""))
+fav(tweet_cid)
 ```
 
 in ```on_data``` method. 
@@ -33,7 +33,7 @@ in ```on_data``` method.
 To favorite a tweet you would add
 
 ```python
-unfav(raw_data.split('"id":')[1].split('"id_str":')[0].replace(",", ""))
+unfav(tweet_cid)
 ```
 
 in ```on_data``` method. 
@@ -45,13 +45,28 @@ Lets say if you want to change it to ```"#Hello World"```, you would replace ```
 
 like below.
 ```python
-twt.filter(track=["#Hello World"])
+track_words=["#HelloWorld"]
 ```
 
-If you want to listen to both you would put both in track like this.
+If you want to not retweet or favorite a tweet from a certian account or tweets with works
+put it in this arrays
 
 ```python
-twt.filter(track=["#Hello World", "#SriLanka"])
+ accs = ['twitter' , 'twittersupport'] # banned account screen name goes in here
+ words = ['hate' , 'derp'] # banned words goes in here
+```
+
+If you want to listen to both you would put both in track like this. 
+
+
+```python
+track_words=["#Hello World", "#SriLanka"]
+```
+
+if you want to listen to tweet from a certian account put them in `follow_acc`
+
+```
+ follow_acc = ['2312312' , '1234332'] # all username converted to user ids
 ```
 
 
