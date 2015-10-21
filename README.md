@@ -31,7 +31,7 @@ in ```on_data``` method.
 
 
 #UnFavorite
-To favorite a tweet you would add
+To unfavorite a tweet you would add
 
 ```python
 unfav(tweet_cid)
