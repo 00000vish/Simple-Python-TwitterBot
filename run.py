@@ -28,7 +28,7 @@ class listener(StreamListener):
                     # call what u want to do here
                     #fav(tweet_cid)
                     #retweet(tweet_cid)
-            return True
+            		return True
         except Exception as e:
             print(str(e)) # prints the error msg, if u dont want it comment it out
             pass
