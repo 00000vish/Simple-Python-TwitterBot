@@ -49,14 +49,6 @@ like below.
 track_words=["#HelloWorld"]
 ```
 
-If you want to not retweet or favorite a tweet from a certian account or tweets with works
-put it in this arrays
-
-```python
- accs = ['twitter' , 'twittersupport'] # banned account screen name goes in here
- words = ['hate' , 'derp'] # banned words goes in here
-```
-
 If you want to listen to both you would put both in track like this. 
 
 
@@ -71,3 +63,12 @@ if you want to listen to tweet from a certian account put them in `follow_acc`
 ```
 
 
+
+#Ban Account or Words
+If you want to not retweet or favorite a tweet from a certian account or tweets with works
+put it in this arrays
+
+```python
+ accs = ['twitter' , 'twittersupport'] # banned account screen name goes in here
+ words = ['hate' , 'derp'] # banned words goes in here
+```
