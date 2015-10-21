@@ -3,7 +3,7 @@
 Simple python code i created for my twitter bot. It is able to listen to ketword and retweet and/or favorite it.
 
 Exmaples:  
-@Jothipala_Bot  :  https://twitter.com/Jothipala_Bot  ||
+@Jothipala_Bot  :  https://twitter.com/Jothipala_Bot  
 
 @WinnipegWatch  :  https://twitter.com/WinnipegWatch
            
