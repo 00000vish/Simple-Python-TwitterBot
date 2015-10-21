@@ -65,8 +65,8 @@ if you want to listen to tweet from a certian account put them in `follow_acc`
 
 
 #Ban Account or Words
-If you want to not retweet or favorite a tweet from a certian account or tweets with works
-put it in this arrays
+If you want to not retweet or favorite a tweet from a certian account or tweets with words,
+put them into the following arrays.
 
 ```python
  accs = ['twitter' , 'twittersupport'] # banned account screen name goes in here
