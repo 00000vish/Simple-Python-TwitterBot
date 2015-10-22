@@ -40,6 +40,11 @@ unfav(tweet_cid)
 in ```on_data``` method. 
 
 #Streaming API
+
+```
+track_words=["#SriLanka"]
+```
+
 This will listen to "#SriLanka" tag live.
  
 Lets say if you want to change it to ```"#Hello World"```, you would replace ```"#SriLanka"``` with ```"#Hello World"```
