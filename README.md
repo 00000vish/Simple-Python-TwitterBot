@@ -15,10 +15,10 @@ if you dont have one create it here : https://apps.twitter.com/
 #Oauth
 Fill in Oauth info to
 
-* `ckey = ''`
-* `csecret = ''`
-* `atoken = ''`
-* `asecret = ''`
+* `ckey = 'here'`
+* `csecret = 'here'`
+* `atoken = 'here'`
+* `asecret = 'here'`
 
 #Favorite
 To favorite a tweet you would add
