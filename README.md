@@ -1,5 +1,11 @@
 # Simple-Python-TwitterBot 
 #```in progress, more features to come```
+
+
+#Video
+[![Video](http://i.imgur.com/14lnzbS.png)](http://www.youtube.com/watch?v=OurIac65qqI)
+
+
 Simple python code i created for my twitter bots. It is able to listen to ketword and retweet and/or favorite it.
 
 Exmaples:  
