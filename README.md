@@ -1,22 +1,27 @@
 # Simple-Python-TwitterBot 
-#```in progress, more features to come```
+#```work in progress```
 
 
 #Video
 [![Video](http://i.imgur.com/14lnzbS.png)](http://www.youtube.com/watch?v=OurIac65qqI)
 
 
-Simple python code i created for my twitter bots. It is able to listen to ketword and retweet and/or favorite it.
+Simple python code i created for my twitter bots using Tweepy. It is able to listen to keyword and retweet and/or favorite them.
 
 Exmaples:  
 @Jothipala_Bot  :  https://twitter.com/Jothipala_Bot  
 
-@WinnipegWatch  :  https://twitter.com/WinnipegWatch
-           
 
 Need to have twitter app with Oauth keys and etc.
 
 if you dont have one create it here : https://apps.twitter.com/
+
+
+#Requirements 
+Tweepy ( installed )
+
+Python 2.7 or 3.3 ( installed, I had issues getting tweepy working on 3.4 )
+
 
 #Oauth
 Fill in Oauth info to
