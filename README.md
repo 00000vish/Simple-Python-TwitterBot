@@ -1,5 +1,4 @@
 # Simple-Python-TwitterBot 
-#```work in progress```
 
 
 #Video
