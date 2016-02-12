@@ -75,7 +75,7 @@ def tweet(myinput):
         pass
 
 
-track_words = ["#lka","SriLanka","@Jothipala_Bot","@SiripalaBot"]
+track_words = ["#lka","SriLanka","@Jothipala_Bot"]
 follow_acc = ['2312312' , '1234332'] # all username converted to user ids
 
 try:
