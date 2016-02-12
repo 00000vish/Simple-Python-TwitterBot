@@ -69,7 +69,7 @@ def unfav(tweet_cid):
 
 def tweet(myinput):
     try:
-        api.update_status(myinput)
+        api.update_status(status=myinput)
     except Exception as e:
         print(str(e))
         pass
