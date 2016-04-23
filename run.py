@@ -26,9 +26,8 @@ class listener(StreamListener):
             if not any(acc in screen_name.lower() for acc in accs):
                 if not any(word in tweet_text.lower() for word in words):
                 	# call what u want to do here
-                    	#fav(tweet_cid)
+                    #fav(tweet_cid)
                 	#retweet(tweet_cid)
-                	#syntax need to be fixed here
             		return True
             	
         except Exception as e:
