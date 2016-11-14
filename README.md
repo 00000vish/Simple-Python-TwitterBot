@@ -1,16 +1,11 @@
 # Simple-Python-TwitterBot 
 
 
+Simple python code i created for my twitter bots using Tweepy. It is able to listen to keyword and retweet and/or favorite them. Exmaple: [@Jothipala_Bot](https://twitter.com/Jothipala_Bot)
+
+
 #Video
 [![Video](http://i.imgur.com/14lnzbS.png)](http://www.youtube.com/watch?v=OurIac65qqI)
-
-
-Simple python code i created for my twitter bots using Tweepy. It is able to listen to keyword and retweet and/or favorite them.
-
-Exmaple:  
-@Jothipala_Bot: https://twitter.com/Jothipala_Bot  
-
-
 
 
 #Requirements 
