@@ -11,15 +11,16 @@ Exmaples:
 @Jothipala_Bot  :  https://twitter.com/Jothipala_Bot  
 
 
-Need to have twitter app with Oauth keys and etc.
-
-if you dont have one create it here : https://apps.twitter.com/
 
 
 #Requirements 
-Tweepy ( installed )
+Tweepy (installed).
 
-Python 2.7 or 3.3 ( installed, I had issues getting tweepy working on 3.4 )
+
+Need to have twitter app with Oauth keys and etc.
+
+
+Python 2.7 or 3.4.
 
 
 #Oauth
