@@ -7,8 +7,8 @@
 
 Simple python code i created for my twitter bots using Tweepy. It is able to listen to keyword and retweet and/or favorite them.
 
-Exmaples:  
-@Jothipala_Bot  :  https://twitter.com/Jothipala_Bot  
+Exmaple:  
+@Jothipala_Bot: https://twitter.com/Jothipala_Bot  
 
 
 
