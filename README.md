@@ -30,7 +30,16 @@ Fill in Oauth info to
 To favorite a tweet you would add
 
 ```python
-fav(tweet_cid)
+ fav(tweet_cid)
+```
+
+in ```on_data``` method. 
+
+#Retweet
+To retweet a tweet you would add
+
+```python
+ retweet(tweet_cid)
 ```
 
 in ```on_data``` method. 
@@ -40,7 +49,7 @@ in ```on_data``` method.
 To unfavorite a tweet you would add
 
 ```python
-unfav(tweet_cid)
+ unfav(tweet_cid)
 ```
 
 in ```on_data``` method. 
@@ -48,21 +57,27 @@ in ```on_data``` method.
 #Streaming API
 
 ```
-track_words=["#SriLanka"]
+ track_words=["#SriLanka"]
+ ...
+ twt.filter(track= track_words) 
 ```
 
 This will listen to "#SriLanka" tag live.
 
 
-If you want to listen to tweets from a certian account put them in `follow_acc`
+If you want to listen to tweets from a certian account:
 
 ```
  follow_acc = ['2312312' , '1234332'] # all username converted to user ids
+ ...
+ twt.filter(follow = follow_acc)
 ```
 
 If you want to listen to tweets from a certian location:
 ```
  loc = [-74.255735,40.496044,-73.7002721,40.9152555] #Box cordinations at the location
+ ...
+ twt.filter(locations=loc)
 ```
 
 
