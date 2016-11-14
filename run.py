@@ -13,6 +13,15 @@ auths = OAuthHandler(ckey, csecret)
 auths.set_access_token(atoken, asecret)
 api = tweepy.API(auths)
 
+
+#whitelist handles and words goes in here
+whitelist_acc = [' ', ' ']
+whitelist_words = [' ', ' ']
+
+#banned handles and words goes in here
+banned_accs =  [' ' ,' ']
+banned_words = [' ' ,' ']
+
 class listener(StreamListener):
     def on_data(self, raw_data):
         try:
@@ -21,13 +30,6 @@ class listener(StreamListener):
             screen_name = raw_data.lower().split('"screen_name":"')[1].split('","location"')[0].replace(",", "") #tweet's authors screen name
             tweet_sid = raw_data.split('"id":')[1].split('"id_str":')[0].replace(",", "") #tweet's id
 
-			#whitelist handles and words goes in here
-            whitelist_acc = [' ', ' ']
-            whitelist_words = [' ', ' ']
-
-            #banned handles and words goes in here
-            banned_accs =  [' ' ,' ']
-            banned_words = [' ' ,' ']
 
             if not any(a_acc == screen_name.lower() for a_acc in whitelist_acc):
                 if not any(acc == screen_name.lower() for acc in banned_accs):
