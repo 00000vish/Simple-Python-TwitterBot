@@ -52,34 +52,30 @@ track_words=["#SriLanka"]
 ```
 
 This will listen to "#SriLanka" tag live.
- 
-Lets say if you want to change it to ```"#Hello World"```, you would replace ```"#SriLanka"``` with ```"#Hello World"```
-
-like below.
-```python
-track_words=["#HelloWorld"]
-```
-
-If you want to listen to both you would put both in track like this. 
 
 
-```python
-track_words=["#Hello World", "#SriLanka"]
-```
-
-if you want to listen to tweet from a certian account put them in `follow_acc`
+If you want to listen to tweets from a certian account put them in `follow_acc`
 
 ```
  follow_acc = ['2312312' , '1234332'] # all username converted to user ids
 ```
 
+If you want to listen to tweets from a certian location:
+```
+ loc = [-74.255735,40.496044,-73.7002721,40.9152555] #Box cordinations at the location
+```
 
 
-#Ban Account or Words
+#Bans and Whitelists
 If you want to not retweet or favorite a tweet from a certian account or tweets with words,
 put them into the following arrays.
 
 ```python
- accs = ['twitter' , 'twittersupport'] # banned account screen name goes in here
- words = ['hate' , 'derp'] # banned words goes in here
+ banned_accs = ['twitter' , 'twittersupport'] # banned account screen name goes in here
+ banned_words = ['hate' , 'derp'] # banned words goes in here
+```
+
+```python
+ whitelist_acc = ['twitter' , 'twittersupport'] # banned account screen name goes in here
+ whitelist_words = ['Hellow' , 'Daft Punk'] # banned words goes in here
 ```
