@@ -24,22 +24,21 @@ class listener(StreamListener):
     def on_data(self, raw_data):
         try:
             isRetweeted = raw_data.lower().split('"retweeted":')[1].split(',"possibly_sensitive"')[0].replace(",", "")
-            tweetText = raw_data.lower().split('"text":"')[1].split('","source":"')[0].replace(",", "") #tweet's text
-            userName = raw_data.lower().split('"screen_name":"')[1].split('","location"')[0].replace(",", "") #tweet's authors screen name
-            tweetId = raw_data.split('"id":')[1].split('"id_str":')[0].replace(",", "") #tweet's id
+            tweetText = raw_data.lower().split('"text":"')[1].split('","source":"')[0].replace(",", "")  # tweet's text
+            userName = raw_data.lower().split('"screen_name":"')[1].split('","location"')[0].replace(",", "")  # tweet's authors screen name
+            tweetId = raw_data.split('"id":')[1].split('"id_str":')[0].replace(",", "")  # tweet's id
 
             if (userWhitelist(userName) or (userBanned(userName) and safeForWork(tweetText))):
-                if("false" in isRetweeted):
-                    retweet(tweetId)
-                
-            return True
+                retweet(tweetId)           
+            print("https://twitter.com/" + userName  + "/status/"  + tweetId)
+            print("WHITELIST: " + str(userWhitelist(userName)) + "  BANNED: " + str(not userBanned(userName)) + "  TEXTSAFE: " + str(safeForWork(tweetText)))
+            return True    
         except Exception as e:
-            print(str(e)) # prints the error msg, if u dont want it comment it out
+            print(str(e))  # prints the error msg, if u dont want it comment it out
             pass
 
     def on_error(self, status_code):
-        print( "error " + status_code)
-
+        print("error " + status_code)
 
 def userWhitelist(userName):
     if any(a_acc == userName.lower() for a_acc in whitelist_acc):
