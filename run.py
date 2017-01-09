@@ -6,88 +6,85 @@ from tweepy.auth import OAuthHandler
 
 ckey = ''
 csecret = ''
-atoken = ''
+atoken = '-'
 asecret = ''
 
 auths = OAuthHandler(ckey, csecret)
 auths.set_access_token(atoken, asecret)
 api = tweepy.API(auths)
 
-
 #whitelist handles and words goes in here
-whitelist_acc = [' ', ' ']
-whitelist_words = [' ', ' ']
+whitelist_acc = ['','']
 
 #banned handles and words goes in here
-banned_accs =  [' ' ,' ']
-banned_words = [' ' ,' ']
+banned_accs =  ['','']
+banned_words = ['', '']
 
 class listener(StreamListener):
     def on_data(self, raw_data):
         try:
-            retweet_ed = raw_data.lower().split('"retweeted":')[1].split(',"possibly_sensitive"')[0].replace(",", "")
-            tweet_text = raw_data.lower().split('"text":"')[1].split('","source":"')[0].replace(",", "") #tweet's text
-            screen_name = raw_data.lower().split('"screen_name":"')[1].split('","location"')[0].replace(",", "") #tweet's authors screen name
-            tweet_sid = raw_data.split('"id":')[1].split('"id_str":')[0].replace(",", "") #tweet's id
+            isRetweeted = raw_data.lower().split('"retweeted":')[1].split(',"possibly_sensitive"')[0].replace(",", "")
+            tweetText = raw_data.lower().split('"text":"')[1].split('","source":"')[0].replace(",", "") #tweet's text
+            userName = raw_data.lower().split('"screen_name":"')[1].split('","location"')[0].replace(",", "") #tweet's authors screen name
+            tweetId = raw_data.split('"id":')[1].split('"id_str":')[0].replace(",", "") #tweet's id
 
-
-            if not any(a_acc == screen_name.lower() for a_acc in whitelist_acc):
-                if not any(acc == screen_name.lower() for acc in banned_accs):
-                    if not any(a_wrds in screen_name.lower() for a_wrds in whitelist_words):
-                        if not any(word in tweet_text.lower() for word in banned_words):
-                            if("false" in retweet_ed):
-                                #call what u want to do here
-                                #for example :
-                                #fav(tweet_sid)
-                                #retweet(tweet_sid)
-                            else:
-                                #call what u want to do here
-                                #for example :
-                                #fav(tweet_sid)
-                                #retweet(tweet_sid)
+            if (userWhitelist(userName) or (userBanned(userName) and safeForWork(tweetText))):
+                if("false" in isRetweeted):
+                    retweet(tweetId)
+                
             return True
         except Exception as e:
             print(str(e)) # prints the error msg, if u dont want it comment it out
             pass
 
     def on_error(self, status_code):
-        try:
-            print( "error " + status_code)
-        except Exception as e:
-            print(str(e))
-        pass
+        print( "error " + status_code)
 
 
-def retweet(tweet_sid):
+def userWhitelist(userName):
+    if any(a_acc == userName.lower() for a_acc in whitelist_acc):
+        return True
+    return False
+
+def userBanned(userName):
+    if not any(acc == userName.lower() for acc in banned_accs):
+        return True
+    return False
+
+def safeForWork(tweetText):
+    if not any(word in tweetText.lower() for word in banned_words):
+        return True
+    return False
+
+def retweet(tweetId):
     try:
-        api.retweet(tweet_sid)
+        api.retweet(tweetId)
     except Exception as e:
         print(str(e))
         pass
 
-
-def fav(tweet_sid):
+def fav(tweetId):
     try:
-        api.create_favorite(tweet_sid)
+        api.create_favorite(tweetId)
     except Exception as e:
         print(str(e))
         pass
 
-def tweetPost(tweet_text):
+def tweetPost(tweetText):
     try:
-        api.update_status(status=tweet_text)
+        api.update_status(status=tweetText)
     except Exception as e:
         print(str(e))
         pass
 
-track_words = [" "," "," "] #retweet any tweet with these words
+track_words = ["Sri Lanka"] #retweet any tweet with these words
 follow_acc = ['20536157',"20573247"] #retweet every tweet from this accounts, handles converted to ids
 loc = [-74.255735,40.496044,-73.7002721,40.9152555] #reteet any tweet with goelocation that matches this box
 
 print("Running...")
 try:
     twt = Stream(auths, listener())
-    twt.filter(track= track_words) # OR (follow = follow_acc)  OR  (locations=loc)
+    twt.filter(track=track_words)
 except Exception as e:
     print(str(e))
     pass
