@@ -2,7 +2,6 @@
 import tweepy
 from tweepy.auth import OAuthHandler
 from tweepy.streaming import StreamListener, Stream
-from tweepy.auth import OAuthHandler
 
 ckey = ''
 csecret = ''
