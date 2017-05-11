@@ -15,7 +15,7 @@ Tweepy (installed).
 Need to have twitter app with Oauth keys and etc.
 
 
-Python 2.7 or 3.4.
+Python 3.4 recommended.
 
 
 #Oauth
