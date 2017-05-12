@@ -4,11 +4,11 @@
 Simple python code i created for my twitter bots using Tweepy. It is able to listen to keyword and retweet and/or favorite them. Exmaple: [@Jothipala_Bot](https://twitter.com/Jothipala_Bot)
 
 
-#Video
+# Video
 [![Video](http://i.imgur.com/14lnzbS.png)](http://www.youtube.com/watch?v=OurIac65qqI)
 
 
-#Requirements 
+# Requirements 
 Tweepy (installed).
 
 
@@ -18,7 +18,7 @@ Need to have twitter app with Oauth keys and etc.
 Python 3.4 recommended.
 
 
-#Oauth
+# Oauth
 Fill in Oauth info to
 
 * `ckey = 'here'`
@@ -26,7 +26,7 @@ Fill in Oauth info to
 * `atoken = 'here'`
 * `asecret = 'here'`
 
-#Favorite
+# Favorite
 To favorite a tweet you would add
 
 ```python
@@ -35,7 +35,7 @@ To favorite a tweet you would add
 
 in ```on_data``` method. 
 
-#Retweet
+# Retweet
 To retweet a tweet you would add
 
 ```python
@@ -45,7 +45,7 @@ To retweet a tweet you would add
 in ```on_data``` method. 
 
 
-#UnFavorite
+# UnFavorite
 To unfavorite a tweet you would add
 
 ```python
@@ -54,7 +54,7 @@ To unfavorite a tweet you would add
 
 in ```on_data``` method. 
 
-#Streaming API
+# Streaming API
 
 ```
  track_words=["#SriLanka"]
@@ -81,7 +81,7 @@ If you want to listen to tweets from a certian location:
 ```
 
 
-#Bans and Whitelists
+# Bans and Whitelists
 If you want to not retweet or favorite a tweet from a certian account or tweets with words,
 put them into the following arrays.
 
