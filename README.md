@@ -74,5 +74,5 @@ If you want to listen to tweets from a certian location:
 # Bans and Whitelists
 If you want to not retweet or favorite a tweet from a certian account or tweets with words,
 put them into thier corresponding textfiles. For exmaple if you want to ban a word, add it to 
-the BannedWords.txt or if you want to ban an account add the username to the BannedAccounts.txt file.
-Also if you want to whitelist an account add its username to WhitelistAccounts.txt file.
+the `BannedWords.txt` or if you want to ban an account add the username to the `BannedAccounts.txt` file.
+Also if you want to whitelist an account add its username to `WhitelistAccounts.txt` file.
