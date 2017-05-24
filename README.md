@@ -26,11 +26,11 @@ Fill in Oauth info to
 * `atoken = 'here'`
 * `asecret = 'here'`
 
-# Favorite
-To favorite a tweet you would add
+# Like
+To like a tweet you would add
 
 ```python
- fav(tweet_cid)
+ like(tweet_cid)
 ```
 
 in ```on_data``` method. 
@@ -45,33 +45,30 @@ To retweet a tweet you would add
 in ```on_data``` method. 
 
 
-# UnFavorite
-To unfavorite a tweet you would add
+# UnLike
+To unlike a tweet you would add
 
 ```python
- unfav(tweet_cid)
+ unlike(tweet_cid)
 ```
 
 in ```on_data``` method. 
 
 # Streaming API
 
-```
- track_words=["#SriLanka"]
- ...
+``` 
  twt.filter(track= track_words) 
 ```
-
-This will listen to "#SriLanka" tag live.
+Provide the track words in TrackWords.txt file.
 
 
 If you want to listen to tweets from a certian account:
 
 ```
- follow_acc = ['2312312' , '1234332'] # all username converted to user ids
- ...
  twt.filter(follow = follow_acc)
 ```
+Provide the follow accounts in FollowAccounts.txt file.
+
 
 If you want to listen to tweets from a certian location:
 ```
@@ -83,14 +80,6 @@ If you want to listen to tweets from a certian location:
 
 # Bans and Whitelists
 If you want to not retweet or favorite a tweet from a certian account or tweets with words,
-put them into the following arrays.
-
-```python
- banned_accs = ['twitter' , 'twittersupport'] # banned account screen name goes in here
- banned_words = ['hate' , 'derp'] # banned words goes in here
-```
-
-```python
- whitelist_acc = ['twitter' , 'twittersupport'] # banned account screen name goes in here
- whitelist_words = ['Hellow' , 'Daft Punk'] # banned words goes in here
-```
+put them into thier corresponding textfiles. For exmaple if you want to ban a word, add it to 
+the BannedWords.txt or if you want to ban an account add the username to the BannedAccounts.txt file.
+Also if you want to whitelist an account add its username to WhitelistAccounts.txt file.
