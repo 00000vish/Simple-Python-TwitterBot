@@ -52,7 +52,7 @@ If you want to listen to cretain words:
 ``` 
  twt.filter(track= track_words) 
 ```
-Provide the track words list in TrackWords.txt file.
+Provide the track words list in `TrackWords.txt` file.
 
 
 If you want to listen to tweets from a certian account:
@@ -60,7 +60,7 @@ If you want to listen to tweets from a certian account:
 ```
  twt.filter(follow = follow_acc)
 ```
-Provide the follow accounts in FollowAccounts.txt file.
+Provide the follow accounts in `FollowAccounts.txt` file.
 
 
 If you want to listen to tweets from a certian location:
