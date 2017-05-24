@@ -56,10 +56,12 @@ in ```on_data``` method.
 
 # Streaming API
 
+If you want to listen to cretain words:
+
 ``` 
  twt.filter(track= track_words) 
 ```
-Provide the track words in TrackWords.txt file.
+Provide the track words list in TrackWords.txt file.
 
 
 If you want to listen to tweets from a certian account:
