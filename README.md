@@ -45,15 +45,6 @@ To retweet a tweet you would add
 in ```on_data``` method. 
 
 
-# UnLike
-To unlike a tweet you would add
-
-```python
- unlike(tweet_cid)
-```
-
-in ```on_data``` method. 
-
 # Streaming API
 
 If you want to listen to cretain words:
