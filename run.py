@@ -105,6 +105,12 @@ def getFollowAccounts():
             if "#DO_NOT_REMOVE_THIS_LINE#" not in str(line):
                 follow_accs.append(line.strip())
 
+def getWhiteListAccounts():
+    with open("WhitelistAccounts.txt") as ins:
+        for line in ins:
+            if "#DO_NOT_REMOVE_THIS_LINE#" not in str(line):
+                whitelist_acc.append(line.strip())              
+                               
 def restart():
     print("Restart....")
     startBot()
@@ -120,6 +126,8 @@ def startBot():
     print("getting track words....check")
     getFollowAccounts()
     print("getting follow accounts....check")
+    getWhiteListAccounts()
+    print("getting whitelist accounts....check")
     print("")
     print("""\
 
